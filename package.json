@@ -4,7 +4,18 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc --pretty",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
+    "check-all": "yarn lint && yarn type-check",
+    "pre-commit-check": "yarn run format && yarn run check-all && git add .",
+    "pre-push-check": "yarn lint && yarn type-check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit-check",
+      "pre-push": "yarn pre-push-check"
+    }
   },
   "dependencies": {
     "next": "latest",
@@ -15,6 +26,16 @@
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
-    "typescript": "4.0"
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "typescript": "^4.4.3"
   }
 }
