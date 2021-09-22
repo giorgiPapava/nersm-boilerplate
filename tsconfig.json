@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@src/*": [
         "./src/*"
@@ -32,11 +33,14 @@
     "noUnusedParameters": true, // Report errors on unused parameters
     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include": [
-    "src/**/*" // *** The files TypeScript should type check ***
-  ],
   "exclude": [
     "node_modules",
     "build"
   ] // *** The files to not type check ***
+  ,
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

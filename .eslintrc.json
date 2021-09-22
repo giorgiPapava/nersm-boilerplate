@@ -21,12 +21,10 @@
   "rules": {
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      { "argsIgnorePattern": "^_" }
-    ],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
 
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
@@ -39,18 +37,15 @@
       "ignorePackages",
       {
         "ts": "never",
-        "tsx": "never"
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
       }
     ],
 
     "no-use-before-define": "off",
     "no-shadow": "off",
-    "max-len": [
-      2,
-      100,
-      2,
-      { "ignoreUrls": true, "ignorePattern": "^import .*" }
-    ],
+    "max-len": [2, 100, 2, { "ignoreUrls": true, "ignorePattern": "^import .*" }],
     "semi": ["error", "always"],
     "no-unused-vars": [
       "error",
@@ -66,6 +61,7 @@
   },
   "globals": {
     "React": true,
-    "JSX": true
+    "JSX": true,
+    "NodeJS": true
   }
 }
