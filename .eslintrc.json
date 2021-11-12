@@ -43,6 +43,7 @@
       }
     ],
 
+    "operator-linebreak": "off",
     "no-use-before-define": "off",
     "no-shadow": "off",
     "max-len": [2, 100, 2, { "ignoreUrls": true, "ignorePattern": "^import .*" }],
