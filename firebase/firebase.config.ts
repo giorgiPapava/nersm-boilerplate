@@ -1,15 +1,16 @@
 import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: 'rebank-mobile-bank.firebaseapp.com',
-  databaseURL: 'https://rebank-mobile-bank.firebaseio.com',
-  projectId: 'rebank-mobile-bank',
-  storageBucket: 'rebank-mobile-bank.appspot.com',
-  messagingSenderId: '978741734341',
-  appId: '1:978741734341:web:d0c5ab965f26a4c2edf9ac',
-  measurementId: 'G-CWFTN2RWJ4',
+  apiKey: 'AIzaSyBw7nYluhK1DIOVp7BLKVH5flf7R28bmVc',
+  authDomain: 'nersm-boli.firebaseapp.com',
+  projectId: 'nersm-boli',
+  storageBucket: 'nersm-boli.appspot.com',
+  messagingSenderId: '202529849336',
+  appId: '1:202529849336:web:4fa3122027aecf026ce00d',
+  measurementId: 'G-4PH7ZK2ZJX',
 };
 const fbInstance = initializeApp(firebaseConfig);
+const db = getFirestore();
 
-export { fbInstance };
+export { fbInstance, db };
